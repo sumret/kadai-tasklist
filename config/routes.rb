@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   # ユーザー
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :create]
+  # show は不要
+  resources :users, only: [:index, :create]
   
   # タスク
   resources :tasks
